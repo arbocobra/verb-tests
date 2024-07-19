@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/arbocobra/verb-tests/static/css/main.52cc187f.css",
+    "main.js": "/arbocobra/verb-tests/static/js/main.f6896895.js",
+    "index.html": "/arbocobra/verb-tests/index.html",
+    "main.52cc187f.css.map": "/arbocobra/verb-tests/static/css/main.52cc187f.css.map",
+    "main.f6896895.js.map": "/arbocobra/verb-tests/static/js/main.f6896895.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52cc187f.css",
+    "static/js/main.f6896895.js"
+  ]
+}
