@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 const Answer = (props) => {
-   const {verb, index, handleSubmit} = props
+   const {verb, index, handleSubmit, responseIcon} = props
 
    useEffect(() => {
       const div = document.getElementById(`input-${index}`)
@@ -13,7 +13,8 @@ const Answer = (props) => {
    const pressEnter = (e) => {
       if (e.key === 'Enter') {
          e.preventDefault();
-         handleSubmit(e.target.value)
+         const clearCaps = e.target.value.toLowerCase()
+         handleSubmit(clearCaps)
          clearText(e.target)
        }
    }
@@ -31,7 +32,8 @@ const Answer = (props) => {
       return (
          <div id={`input-${index}`} className='answer-container'>
             <div className='pronoun'>{verb.pronounP}</div>
-            <input className='answer-input' type='text' />
+            <input className='answer-input' maxLength='20' type='text' />
+            <div className='icon'><img src={responseIcon}/></div>
          </div>
       )
    }

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Answer from './Answer';
 import Hint from './Hint';
 import { checkAnswer } from '../functions/questionFunctions';
+import checkMark from './../images/check.png'
+import xMark from './../images/delete.png'
+import exclamationMark from './../images/exclamation.png'
 
 const Question = (props) => {
    const {verb, index, display, handleAnswer} = props
@@ -21,6 +24,14 @@ const Question = (props) => {
          </div>
       )
    }
+
+   const responseIcon = () => {
+      if (correct === null) return null
+      else if (correct === 0) return checkMark
+      else if (correct === 1) return exclamationMark
+      else if (correct === 2) return xMark
+   }
+   // const responseIcon = setIcon()
 
    const isCorrectIcon = () => {
       if (correct === null) return null
@@ -56,8 +67,8 @@ const Question = (props) => {
                <div className='question-text'>
                   <p>{verb.fullE}</p>
                </div>
-               <Answer verb={verb} index={index} handleSubmit={handleSubmit} />
-               {isCorrectIcon()}
+               <Answer verb={verb} index={index} handleSubmit={handleSubmit} responseIcon={responseIcon()} />
+               {/* {isCorrectIcon()} */}
                {isCorrectText()}
             </div>
             <Hint verb={verb} index={index} />

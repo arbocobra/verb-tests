@@ -43,7 +43,7 @@ const TestContainer = (props) => {
    if (testActive) {
       return (
       <div id='test' className='test-container'>
-         <div id='question-box'>
+         <div id='question-container' className='question-box'>
             <Question verb={currentQuestion} index={activeIndex} display={true} handleAnswer={handleAnswer} key={activeIndex} />
          </div> 
          <Footer activeId={activeIndex} testLength={questionIdArray.length} completeTest={completeTest} />
