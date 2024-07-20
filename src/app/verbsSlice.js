@@ -50,28 +50,11 @@ export const verbsSlice = createSlice({
    }
 })
 
-export const selectFilteredVerbs = (state) => {
-  const result = state.verbs.filteredVerbs
-  // console.log(`selectFilteredVerbs: ${result}`)
-  return result
-}
+export const selectFilteredVerbs = (state) => state.verbs.filteredVerbs
 
-export const selectShuffledIds = (state) => {
-  const result = state.verbs.questions.shuffledIds
-  // console.log(`selectShuffledIds: ${result}`)
-  return result
-  // return state.verbs.questions.shuffledIds
-}
+export const selectShuffledIds = (state) => state.verbs.questions.shuffledIds
 
 export const selectNextQuestion = (state) => state.verbs.questions.currentQuestion
-
-export const selectResultTally = (state) => {
-  let correctAnswers = state.verbs.questions.correctAnswers.length
-  let incorrectAnswers = state.verbs.questions.incorrectAnswers.length
-  let totalQuestions = state.verbs.questions.shuffledIds.length
-  if ((correctAnswers + incorrectAnswers) === totalQuestions - 1) return true
-  else return false
-}
 
 export const selectFinalResults = (state) => state.verbs.questions.incorrectAnswers
 

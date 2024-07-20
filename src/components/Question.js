@@ -1,10 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
 import Answer from './Answer';
 import Hint from './Hint';
 import { checkAnswer } from '../functions/questionFunctions';
-
-import _ from 'lodash'
 
 const Question = (props) => {
    const {verb, index, display, handleAnswer} = props
@@ -42,13 +39,13 @@ const Question = (props) => {
       const result = checkAnswer(val, verb.conjugationP)
       if (result === 0) { // is correct
          setCorrect(result)
-         setTimeout(() => handleAnswer(true, verb.id), 1000)
+         setTimeout(() => handleAnswer(true), 1000)
       } else if (result === 1) { // correct but wrong accent
          setCorrect(result)
-         setTimeout(() => handleAnswer(false, verb.id), 2500)
+         setTimeout(() => handleAnswer(false), 2500)
       } else if (result === 2) { // incorrect
          setCorrect(result)
-         setTimeout(() => handleAnswer(false, verb.id), 2500)
+         setTimeout(() => handleAnswer(false), 2500)
       }
    }
 

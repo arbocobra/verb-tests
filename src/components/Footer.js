@@ -1,16 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-
-import _ from 'lodash'
+import React, { useEffect, useRef } from 'react';
 
 const Footer = (props) => {
    const { activeId, testLength, completeTest } = props
    const endTestRef = useRef(null)
-
-   // useEffect(() => {
-   //    // let button = document.getElementById('button2')
-   //    endTestRef.current.addEventListener('click', completeTest)
-   // },[])
 
    useEffect(() => endTestRef.current.addEventListener('click', completeTest),[])
 

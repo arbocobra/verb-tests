@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { resetTest, selectFinalResults } from '../app/verbsSlice';
-
-import _ from 'lodash'
 
 const Results = (props) => {
    const { totalQuestions, setDisplayQuestion, setTestActive } = props
