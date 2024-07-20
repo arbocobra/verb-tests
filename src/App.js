@@ -1,6 +1,5 @@
 // App.js
 import React from 'react';
-import Verbs from './components/Verbs';
 import AltVerbs from './components/AltVerbs';
 import './App.css'
 

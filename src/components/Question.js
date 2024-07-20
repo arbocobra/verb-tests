@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Answer from './Answer';
 import Hint from './Hint';
 import { checkAnswer } from '../functions/questionFunctions';
@@ -44,10 +45,10 @@ const Question = (props) => {
          setTimeout(() => handleAnswer(true, verb.id), 1000)
       } else if (result === 1) { // correct but wrong accent
          setCorrect(result)
-         setTimeout(() => handleAnswer(false, verb.id), 3000)
+         setTimeout(() => handleAnswer(false, verb.id), 2500)
       } else if (result === 2) { // incorrect
          setCorrect(result)
-         setTimeout(() => handleAnswer(false, verb.id), 3000)
+         setTimeout(() => handleAnswer(false, verb.id), 2500)
       }
    }
 

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectShuffledIds, selectNextQuestion, setQuestion, addCorrect, addIncorrect, selectResultTally, selectFinalResults } from '../app/verbsSlice';
 
 import Question from './Question';
-import AltQuestion from './AltQuestion';
 import Results from './Results';
 import Footer from './Footer';
 
@@ -46,7 +45,7 @@ const AltQuestionBox = (props) => {
       return (
       <div id='test' className='test-container'>
          <div id='question-box'>
-            <AltQuestion verb={currentQuestion} index={activeIndex} display={true} handleAnswer={handleAnswer} key={activeIndex} />
+            <Question verb={currentQuestion} index={activeIndex} display={true} handleAnswer={handleAnswer} key={activeIndex} />
          </div> 
          <Footer activeId={activeIndex} testLength={questionIdArray.length} completeTest={completeTest} />
       </div>
