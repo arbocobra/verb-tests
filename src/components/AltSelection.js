@@ -6,7 +6,7 @@ import { startTest, selectFilteredAllVerbs } from '../app/verbsSlice';
 
 // import createVerbObject from '../functions/loadingFunctions';
 
-const AltSelection = (props) => {
+const Selection = (props) => {
    const {updatePage} = props
    // const {submitTense, selectedTense, setSelectedTense} = props
    const [selectedTense, setSelectedTense] = useState(['all'])
@@ -92,4 +92,4 @@ const AltSelection = (props) => {
    )
 }
 
-export default AltSelection
+export default Selection

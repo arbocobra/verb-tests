@@ -6,8 +6,7 @@ import { startTest } from '../app/verbsSlice';
 // import Selection from './Selection';
 // import Test from './Test';
 
-import AltSelection from './AltSelection';
-import AltTest from './AltTest';
+import Selection from './AltSelection';
 import AltQuestionBox from './AltQuestionBox';
 
 const AltVerbs = () => {
@@ -28,7 +27,7 @@ const AltVerbs = () => {
    return (
       <div id='verbs'>
          {/* { displayQuestion ? <Test displayQuestion={displayQuestion} /> : <Selection updatePage={updatePage} /> }         */}
-         { displayQuestion ? <AltQuestionBox setDisplayQuestion={setDisplayQuestion} /> : <AltSelection updatePage={updatePage} /> } 
+         { displayQuestion ? <AltQuestionBox setDisplayQuestion={setDisplayQuestion} /> : <Selection updatePage={updatePage} /> } 
       </div>
    )
 }
